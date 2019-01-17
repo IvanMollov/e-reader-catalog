@@ -8,11 +8,76 @@
 	            type="Catalog" />
 
 	<xs:complexType name="Catalog">
-		<xs:sequence>
-			<xs:element name="brand"
-			            type="xs:string" />
-			<xs:element name="model"
-			            type="xs:string" />
-		</xs:sequence>
+		<xs:choice minOccurs="0"
+		           maxOccurs="unbounded">
+			<xs:element name="product-info" type="ProductInfo" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="ProductInfo">
+		<xs:all>
+			<xs:element name="general-info" type="GeneralInfo"/>
+			<xs:element name="screen-info" type="ScreenInfo"/>
+			<xs:element name="storage-info" />
+			<xs:element name="processing-info" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="GeneralInfo">
+		<xs:all>
+			<xs:element name="brand" type="xs:string" />
+			<xs:element name="model" type="xs:string" />
+			<xs:element name="release-year" type="xs:decimal" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="ScreenInfo">
+		<xs:all>
+			<xs:element name="screen-size" type="MeasurableDecimal" />
+			<xs:element name="screen-resolution" type="ScreenResolution" />
+			<xs:element name="pixel-density" type="MeasurableInteger" />
+			<xs:element name="grayscale-levels" type="xs:integer" />
+			<xs:element name="front-light" type="xs:boolean" />
+			<xs:element name="blue-light-control" type="xs:boolean" />
+			<xs:element name="touchscreen" type="xs:boolean" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="StorageInfo">
+		<xs:all>
+			<xs:element name="storage" type="MeasurableInteger" />
+			<xs:element name="micro-sd-card-slot" type="xs:boolean" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="ProcessingInfo">
+		<xs:all>
+			<xs:element name="cpu" type="MeasurableInteger" />
+			<xs:element name="ram" type="xs:boolean" />
+			<xs:element name="os" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="MeasurableDecimal">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="measure" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="MeasurableInteger">
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="measure" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="ScreenResolution">
+		<xs:all>
+			<xs:element name="width" type="MeasurableInteger" />
+			<xs:element name="height" type="MeasurableInteger" />
+		</xs:all>
 	</xs:complexType>
 </xs:schema>
