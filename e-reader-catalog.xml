@@ -8,46 +8,34 @@
 
 	<product-info>
 		<general-info>
-			<brand></brand>
-			<model></model>
-			<release-date></release-date>
+			<brand>Likebook</brand>
+			<model>Mars</model>
+			<release-year>2018</release-year>
 		</general-info>
 
-		<screen>
-			<screen-size></screen-size>
-			<screen-resolution></screen-resolution>
-			<pixel-density></pixel-density>
-			<grayscale-levels></grayscale-levels>
-			<front-light></front-light>
-			<blue-light-control></blue-light-control>
-			<touchscreen></touchscreen>
-		</screen>
+		<screen-info>
+			<screen-size measure="inch">7.8</screen-size>
+			<screen-resolution>
+				<width measure="pixel">1782</width>
+				<height measure="pixel">1448</height>
+			</screen-resolution>
+			<pixel-density measure="ppi">300</pixel-density>
+			<grayscale-levels>16</grayscale-levels>
+			<front-light>true</front-light>
+			<blue-light-control>true</blue-light-control>
+			<touchscreen>true</touchscreen>
+		</screen-info>
 
-		<storage>
-			<storage></storage>
-			<micro-sd-card-slot></micro-sd-card-slot>
-		</storage>
+		<storage-info>
+			<storage measure="GB">16</storage>
+			<micro-sd-card-slot>true</micro-sd-card-slot>
+		</storage-info>
 
-		<connectivity>
-			<speakers></speakers>
-			<headphone-jack></headphone-jack>
-			<bluetooth></bluetooth>
-			<wi-fi></wi-fi>
-			<cellular></cellular>
-		</connectivity>
-
-		<processing>
-			<cpu></cpu>
-			<ram></ram>
-			<battery></battery>
-			<os></os>
-		</processing>
-
-		<physical>
-			<dimensions></dimensions>
-			<weight></weight>
-			<waterproof></waterproof>
-			<colors></colors>
-		</physical>
+		<processing-info>
+			<cpu>Freescale RK3365 8 Core 1.5GHz</cpu>
+			<ram measure="GB">2</ram>
+			<battery measure="mAh">3100</battery>
+			<os>Android 6.0</os>
+		</processing-info>
 	</product-info>
 </CATALOG>
