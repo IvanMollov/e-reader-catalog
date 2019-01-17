@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://e-reader.catalog.info"
+           xmlns="http://e-reader.catalog.info"
+           elementFormDefault="qualified">
+
+	<xs:include schemaLocation="util-types.xsd" />
+
+	<xs:complexType name="GeneralInfo">
+		<xs:all>
+			<xs:element name="brand" type="xs:string" />
+			<xs:element name="model" type="xs:string" />
+			<xs:element name="release-year" type="xs:decimal" />
+			<xs:element name="image" type="Image" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="ScreenInfo">
+		<xs:all>
+			<xs:element name="screen-size" type="MeasurableDecimal" />
+			<xs:element name="screen-resolution" type="ScreenResolution" />
+			<xs:element name="pixel-density" type="MeasurableInteger" />
+			<xs:element name="grayscale-levels" type="xs:integer" />
+			<xs:element name="front-light" type="xs:boolean" />
+			<xs:element name="blue-light-control" type="xs:boolean" />
+			<xs:element name="touchscreen" type="xs:boolean" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="StorageInfo">
+		<xs:all>
+			<xs:element name="storage" type="MeasurableInteger" />
+			<xs:element name="micro-sd-card-slot" type="xs:boolean" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="ProcessingInfo">
+		<xs:all>
+			<xs:element name="cpu" type="xs:string" />
+			<xs:element name="ram" type="MeasurableInteger" />
+			<xs:element name="battery" type="MeasurableInteger" />
+			<xs:element name="os" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
