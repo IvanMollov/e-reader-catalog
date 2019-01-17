@@ -2,7 +2,7 @@
 
 <CATALOG xmlns="http://e-reader.catalog.info"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://e-reader.catalog.info e-reader-catalog.xsd">
+         xsi:schemaLocation="http://e-reader.catalog.info xsd/e-reader-catalog.xsd">
 
 	<brands>
 		<brand brandID="LB">Likebook</brand>
