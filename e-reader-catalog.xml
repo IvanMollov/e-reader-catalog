@@ -15,6 +15,7 @@
 				<brand>Likebook</brand>
 				<model>Mars</model>
 				<release-year>2018</release-year>
+				<image src="img/LIKEBOOK-MARS.jpg" notation="jpeg" />
 			</general-info>
 
 			<screen-info>
@@ -48,6 +49,7 @@
 				<brand>Amazon Kindle</brand>
 				<model>Paperwhite</model>
 				<release-year>2018</release-year>
+				<image src="img/kindle-paperwhite-2018.jpg" notation="jpeg" />
 			</general-info>
 
 			<screen-info>
