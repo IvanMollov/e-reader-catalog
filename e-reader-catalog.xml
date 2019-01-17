@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<CATALOG
-	xmlns="http://e-reader.catalog.info"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://e-reader.catalog.info e-reader-catalog.xsd" />
+
+<!-- Disable XML Schema validation while figuring out what data elements should contain -->
+<CATALOG>
+<!-- <CATALOG xmlns="http://e-reader.catalog.info"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://e-reader.catalog.info e-reader-catalog.xsd"> -->
+
+	<product-info>
+		<general-info>
+			<brand></brand>
+			<model></model>
+			<release-date></release-date>
+		</general-info>
+
+		<screen>
+			<screen-size></screen-size>
+			<screen-resolution></screen-resolution>
+			<pixel-density></pixel-density>
+			<grayscale-levels></grayscale-levels>
+			<front-light></front-light>
+			<blue-light-control></blue-light-control>
+			<touchscreen></touchscreen>
+		</screen>
+
+		<storage>
+			<storage></storage>
+			<micro-sd-card-slot></micro-sd-card-slot>
+		</storage>
+
+		<connectivity>
+			<speakers></speakers>
+			<headphone-jack></headphone-jack>
+			<bluetooth></bluetooth>
+			<wi-fi></wi-fi>
+			<cellular></cellular>
+		</connectivity>
+
+		<processing>
+			<cpu></cpu>
+			<ram></ram>
+			<battery></battery>
+			<os></os>
+		</processing>
+
+		<physical>
+			<dimensions></dimensions>
+			<weight></weight>
+			<waterproof></waterproof>
+			<colors></colors>
+		</physical>
+	</product-info>
+</CATALOG>
