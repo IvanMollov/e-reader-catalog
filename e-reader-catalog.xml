@@ -1,39 +1,80 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <CATALOG xmlns="http://e-reader.catalog.info"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://e-reader.catalog.info e-reader-catalog.xsd">
 
-	<product-info>
-		<general-info>
-			<brand>Likebook</brand>
-			<model>Mars</model>
-			<release-year>2018</release-year>
-		</general-info>
+	<brands>
+		<brand brandID="LB">Likebook</brand>
+		<brand brandID="AK">Amazon Kindle</brand>
+	</brands>
 
-		<screen-info>
-			<screen-size measure="inch">7.8</screen-size>
-			<screen-resolution>
-				<width measure="pixel">1782</width>
-				<height measure="pixel">1448</height>
-			</screen-resolution>
-			<pixel-density measure="ppi">300</pixel-density>
-			<grayscale-levels>16</grayscale-levels>
-			<front-light>true</front-light>
-			<blue-light-control>true</blue-light-control>
-			<touchscreen>true</touchscreen>
-		</screen-info>
+	<product-list>
+		<product-info brandID="LB">
+			<general-info>
+				<brand>Likebook</brand>
+				<model>Mars</model>
+				<release-year>2018</release-year>
+			</general-info>
 
-		<storage-info>
-			<storage measure="GB">16</storage>
-			<micro-sd-card-slot>true</micro-sd-card-slot>
-		</storage-info>
+			<screen-info>
+				<screen-size measure="inch">7.8</screen-size>
+				<screen-resolution>
+					<width measure="pixel">1782</width>
+					<height measure="pixel">1448</height>
+				</screen-resolution>
+				<pixel-density measure="ppi">300</pixel-density>
+				<grayscale-levels>16</grayscale-levels>
+				<front-light>true</front-light>
+				<blue-light-control>true</blue-light-control>
+				<touchscreen>true</touchscreen>
+			</screen-info>
 
-		<processing-info>
-			<cpu>Freescale RK3365 8 Core 1.5GHz</cpu>
-			<ram measure="GB">2</ram>
-			<battery measure="mAh">3100</battery>
-			<os>Android 6.0</os>
-		</processing-info>
-	</product-info>
+			<storage-info>
+				<storage measure="GB">16</storage>
+				<micro-sd-card-slot>true</micro-sd-card-slot>
+			</storage-info>
+
+			<processing-info>
+				<cpu>Freescale RK3365 8 Core 1.5GHz</cpu>
+				<ram measure="GB">2</ram>
+				<battery measure="mAh">3100</battery>
+				<os>Android 6.0</os>
+			</processing-info>
+		</product-info>
+
+		<product-info brandID="AK">
+			<general-info>
+				<brand>Amazon Kindle</brand>
+				<model>Paperwhite</model>
+				<release-year>2018</release-year>
+			</general-info>
+
+			<screen-info>
+				<screen-size measure="inch">7.8</screen-size>
+				<screen-resolution>
+					<width measure="pixel">1782</width>
+					<height measure="pixel">1448</height>
+				</screen-resolution>
+				<pixel-density measure="ppi">300</pixel-density>
+				<grayscale-levels>16</grayscale-levels>
+				<front-light>true</front-light>
+				<blue-light-control>true</blue-light-control>
+				<touchscreen>true</touchscreen>
+			</screen-info>
+
+			<storage-info>
+				<storage measure="GB">16</storage>
+				<micro-sd-card-slot>true</micro-sd-card-slot>
+			</storage-info>
+
+			<processing-info>
+				<cpu>Freescale RK3365 8 Core 1.5GHz</cpu>
+				<ram measure="GB">2</ram>
+				<battery measure="mAh">3100</battery>
+				<os>Android 6.0</os>
+			</processing-info>
+		</product-info>
+
+	</product-list>
 </CATALOG>

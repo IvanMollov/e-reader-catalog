@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://e-reader.catalog.info"
            xmlns="http://e-reader.catalog.info"
            elementFormDefault="qualified">
 
 	<xs:element name="CATALOG"
-	            type="Catalog" />
+	            type="Catalog">
+		<xs:key name="BrandID">
+			<xs:selector xpath="brands/brand"/>
+			<xs:field xpath="@brandID"/>
+		</xs:key>
+
+		<xs:keyref name="BrandIDRef" refer="BrandID">
+			<xs:selector xpath="product-list/product-info"/>
+			<xs:field xpath="@brandID"/>
+		</xs:keyref>
+	</xs:element>
 
 	<xs:complexType name="Catalog">
-		<xs:choice minOccurs="0"
-		           maxOccurs="unbounded">
+		<xs:sequence>
+			<xs:element name="brands" type="BrandList" />
+			<xs:element name="product-list" type="ProductList" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrandList">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="brand" type="Brand" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Brand">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="brandID" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="ProductList">
+		<xs:sequence maxOccurs="unbounded">
 			<xs:element name="product-info" type="ProductInfo" />
-		</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="ProductInfo">
 		<xs:all>
 			<xs:element name="general-info" type="GeneralInfo"/>
 			<xs:element name="screen-info" type="ScreenInfo"/>
-			<xs:element name="storage-info" />
-			<xs:element name="processing-info" />
+			<xs:element name="storage-info" type="StorageInfo"/>
+			<xs:element name="processing-info" type="ProcessingInfo"/>
 		</xs:all>
+		<xs:attribute name="brandID" type="xs:string" use="required" />
 	</xs:complexType>
 
 	<xs:complexType name="GeneralInfo">
@@ -52,8 +84,9 @@
 
 	<xs:complexType name="ProcessingInfo">
 		<xs:all>
-			<xs:element name="cpu" type="MeasurableInteger" />
-			<xs:element name="ram" type="xs:boolean" />
+			<xs:element name="cpu" type="xs:string" />
+			<xs:element name="ram" type="MeasurableInteger" />
+			<xs:element name="battery" type="MeasurableInteger" />
 			<xs:element name="os" type="xs:string" />
 		</xs:all>
 	</xs:complexType>
